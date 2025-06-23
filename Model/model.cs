@@ -1,39 +1,38 @@
 namespace T2.Model
 {
-    public enum BusState
+
+    // Modelo do Colaborador
+    public class Colaborador
+    {
+        public int Id { get; set; }
+        public required string Nome { get; set; }
+        public required string NomeUsuario { get; set; }
+        public required string Cargo { get; set; }
+        public int AutocarroId { get; set; }
+    }
+
+
+
+    // Modelo do Autocarro
+    public enum EstadoAutocarro
     {
         Disponivel,
         EmManuntencao,
         EmMovimento
     }
-
-
-public class Colaborador
-{
-    public int Id { get; set; }
-    public string Nome { get; set; }
-    public string Cargo { get; set; }
-    public string Contacto { get; set; }
-    
-    // Chave estrangeira para Autocarro
-    public string? AutocarroMatricula { get; set; }
-    
-    // Propriedade de navegação
-    public Bus? Autocarro { get; set; }
-}
-    public class Bus
+    public class Autocarro
     {
         public int id { get; set; }
         public string Matricula { get; set; }
         public int Capacidade { get; set; }
-        public BusState EstadoCarro { get; set; }
+        public EstadoAutocarro EstadoCarro { get; set; }
 
         public List<Colaborador> Colaboradores { get; set; } = new List<Colaborador>();
 
         public string estado => StringCarState(EstadoCarro);
 
-        public Bus() { }
-        public Bus(string matricula, int capacidade, BusState estado)
+        public Autocarro() { }
+        public Autocarro(string matricula, int capacidade, EstadoAutocarro estado)
         {
             Matricula = matricula;
             Capacidade = capacidade;
@@ -41,23 +40,23 @@ public class Colaborador
         }
 
 
-
-        public string StringCarState(BusState estado) => estado switch
+        public string StringCarState(EstadoAutocarro estado) => estado switch
         {
-            BusState.Disponivel => "Disponível",
-            BusState.EmManuntencao => "Em manuntenção",
-            BusState.EmMovimento => "Em movimento",
+            EstadoAutocarro.Disponivel => "Disponível",
+            EstadoAutocarro.EmManuntencao => "Em manuntenção",
+            EstadoAutocarro.EmMovimento => "Em movimento",
         };
 
     }
     
 
+    // Modelo do Usuário
     public class Usuario
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Email { get; set; }
-        public string Senha { get; set; }
-        public string Perfil { get; set; } // "Admin", "Gestor", "Operador"
+        public required string Nome { get; set; }
+        public required string NomeUsuario { get; set; }
+        public required string Senha { get; set; }
+        public required string TipoUsuario { get; set; } // "Admin", "Gestor", "Operador"
     }
 }
