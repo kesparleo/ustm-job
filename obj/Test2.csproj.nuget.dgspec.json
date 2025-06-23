@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/kespar/Projects/ustm/Test2/Test2.csproj": {}
+    "/home/cassamo/CSharpProjects/projecto1/ustm-job/Test2.csproj": {}
   },
   "projects": {
-    "/home/kespar/Projects/ustm/Test2/Test2.csproj": {
+    "/home/cassamo/CSharpProjects/projecto1/ustm-job/Test2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kespar/Projects/ustm/Test2/Test2.csproj",
+        "projectUniqueName": "/home/cassamo/CSharpProjects/projecto1/ustm-job/Test2.csproj",
         "projectName": "Test2",
-        "projectPath": "/home/kespar/Projects/ustm/Test2/Test2.csproj",
-        "packagesPath": "/home/kespar/.nuget/packages/",
-        "outputPath": "/home/kespar/Projects/ustm/Test2/obj/",
+        "projectPath": "/home/cassamo/CSharpProjects/projecto1/ustm-job/Test2.csproj",
+        "packagesPath": "/home/cassamo/.nuget/packages/",
+        "outputPath": "/home/cassamo/CSharpProjects/projecto1/ustm-job/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kespar/.nuget/NuGet/NuGet.Config"
+          "/home/cassamo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -48,15 +48,19 @@
               "target": "Package",
               "version": "[8.0.13, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.13, )"
             },
-            "Pomelo.EntityFrameworkCore.MySql": {
+            "SQLitePCLRaw.bundle_green": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[2.1.8, )"
             }
           },
           "imports": [
@@ -75,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.117/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.114/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
