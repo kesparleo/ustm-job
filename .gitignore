@@ -1,0 +1,43 @@
+# PROVIDED BY MICROSOFT
+# .NET Core
+bin/
+obj/
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.cache
+*.csproj.DotSettings.user
+
+# Visual Studio / VS Code
+.vscode/
+.idea/
+*.swp
+*~
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log
+logs/
+
+# Environment-specific files
+appsettings.json
+appsettings.*.json
+
+# Dependency directories
+node_modules/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Rider (JetBrains)
+.idea/
+*.iml

@@ -1,8 +1,14 @@
-﻿
-class Program
+﻿using Microsoft.EntityFrameworkCore;
+using T2.Db;
+using T2.Model;
+
+namespace T2
 {
-    static void Main()
-    { }
+    class Program
+    {
+        static void Main()
+        {
 
-
+        }
+    }
 }
