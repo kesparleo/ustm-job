@@ -1120,11 +1120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\enoqu\\source\\Teste2\\Teste2.csproj",
+      "projectUniqueName": "C:\\Users\\enoqu\\source\\ForkUstm\\Teste2.csproj",
       "projectName": "Teste2",
-      "projectPath": "C:\\Users\\enoqu\\source\\Teste2\\Teste2.csproj",
+      "projectPath": "C:\\Users\\enoqu\\source\\ForkUstm\\Teste2.csproj",
       "packagesPath": "C:\\Users\\enoqu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\enoqu\\source\\Teste2\\obj\\",
+      "outputPath": "C:\\Users\\enoqu\\source\\ForkUstm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

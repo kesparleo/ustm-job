@@ -8,6 +8,7 @@ using T2.Controllers;
 using T2.Db;
 using T2.Model;
 using T2.Utils;
+using Teste2.Forms;
 
 namespace Teste2
 {
@@ -23,7 +24,7 @@ namespace Teste2
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
             //ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Login());
 
 
             //Vamos usar só em dev.

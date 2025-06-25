@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f0xMUWbNwPU=",
+  "dgSpecHash": "87u0uSr8mgg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\enoqu\\source\\Teste2\\Teste2.csproj",
+  "projectFilePath": "C:\\Users\\enoqu\\source\\ForkUstm\\Teste2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\enoqu\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.6\\microsoft.data.sqlite.core.9.0.6.nupkg.sha512",
     "C:\\Users\\enoqu\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.6\\microsoft.entityframeworkcore.9.0.6.nupkg.sha512",
