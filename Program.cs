@@ -1,29 +1,45 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 using T2.Controllers;
 using T2.Db;
 using T2.Model;
 using T2.Utils;
+using Teste2.Forms;
 
-namespace T2
+namespace Teste2
 {
-    class Program
+    internal static class Program
     {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
         static void Main()
         {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            Application.EnableVisualStyles();
+            //ApplicationConfiguration.Initialize();
+            Application.Run(new Login());
+
+
             //Vamos usar só em dev.
             //ex do que acontece ao habilitar: Evento: Entidade atualizada - Colaborador, ID: 1
-             AppDbContext.setDebugMode(true); 
-             
+            AppDbContext.setDebugMode(true);
+
             // Inicialização do contexto da database
             var options = new DbContextOptionsBuilder<AppDbContext>()
                 .UseSqlite(Constants.DATABASE_SOURCE)
                 .Options;
             using var context = new AppDbContext(options);
             // Criar a database se não existir
-           if( context.CreateDatabaseIfNotExists())
-           { 
-            Console.WriteLine("Base de dados sincronizada com sucesso!");
+            if (context.CreateDatabaseIfNotExists())
+            {
+                Console.WriteLine("Base de dados sincronizada com sucesso!");
             }
 
             Console.WriteLine("=== Hora da verdade: Sistema de Gestão de Frotas blablabla ===");
@@ -109,9 +125,12 @@ namespace T2
             Console.WriteLine("Autocarro excluído.");
 
             Console.WriteLine("\n=== Teste Concluído ===");
-            Console.ReadLine();
+            Console.WriteLine("Pressione qualquer tecla para sair...");
+            
+
 
 
         }
     }
+    
 }
