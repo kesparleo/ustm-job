@@ -21,6 +21,7 @@ namespace Teste2.Forms
         {
             InitializeComponent();
             this.AcceptButton = btnEntrar;
+            this.BackColor = Color.FromArgb(255, 239, 231, 221);
         }
         private void btnEntrar_Click(object sender, EventArgs e)
         {

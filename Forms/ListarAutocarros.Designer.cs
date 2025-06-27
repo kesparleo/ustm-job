@@ -2,37 +2,26 @@
 {
     partial class ListarAutocarros
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
         private DataGridView dgvAutocarros;
         private Button btnEditar;
         private Button btnExcluir;
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             dgvAutocarros = new DataGridView();
             btnEditar = new Button();
             btnExcluir = new Button();
+            btnAdicionar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAutocarros).BeginInit();
             SuspendLayout();
             // 
@@ -40,45 +29,75 @@
             // 
             dgvAutocarros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAutocarros.ColumnHeadersHeight = 29;
-            dgvAutocarros.Location = new Point(20, 20);
+            dgvAutocarros.Dock = DockStyle.Top;
+            dgvAutocarros.Location = new Point(0, 0);
+            dgvAutocarros.Margin = new Padding(4, 4, 4, 4);
             dgvAutocarros.Name = "dgvAutocarros";
             dgvAutocarros.ReadOnly = true;
             dgvAutocarros.RowHeadersWidth = 51;
             dgvAutocarros.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAutocarros.Size = new Size(768, 300);
+            dgvAutocarros.Size = new Size(1100, 280);
             dgvAutocarros.TabIndex = 0;
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(180, 340);
+            btnEditar.Anchor = AnchorStyles.Bottom;
+            btnEditar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEditar.Location = new Point(425, 504);
+            btnEditar.Margin = new Padding(4, 4, 4, 4);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(100, 30);
+            btnEditar.Size = new Size(138, 55);
             btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
             btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
-            btnExcluir.Location = new Point(300, 340);
+            btnExcluir.Anchor = AnchorStyles.Bottom;
+            btnExcluir.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnExcluir.Location = new Point(711, 504);
+            btnExcluir.Margin = new Padding(4, 4, 4, 4);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(100, 30);
+            btnExcluir.Size = new Size(138, 55);
             btnExcluir.TabIndex = 2;
             btnExcluir.Text = "Excluir";
             btnExcluir.Click += btnExcluir_Click;
             // 
+            // btnAdicionar
+            // 
+            btnAdicionar.Anchor = AnchorStyles.Bottom;
+            btnAdicionar.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAdicionar.Location = new Point(154, 504);
+            btnAdicionar.Margin = new Padding(4, 4, 4, 4);
+            btnAdicionar.Name = "btnAdicionar";
+            btnAdicionar.Size = new Size(154, 55);
+            btnAdicionar.TabIndex = 3;
+            btnAdicionar.Text = "Adicionar";
+            btnAdicionar.Click += btnAdicionar_Click_1;
+            // 
             // ListarAutocarros
             // 
-            ClientSize = new Size(800, 400);
+            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1100, 588);
+            Controls.Add(btnAdicionar);
             Controls.Add(dgvAutocarros);
             Controls.Add(btnEditar);
             Controls.Add(btnExcluir);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "ListarAutocarros";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Listagem de Autocarros";
+            Load += ListarAutocarros_Load;
+            Resize += ListarAutocarros_Resize;
             ((System.ComponentModel.ISupportInitialize)dgvAutocarros).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnAdicionar;
     }
 }

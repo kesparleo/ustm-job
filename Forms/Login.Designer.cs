@@ -48,7 +48,7 @@
             lblUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsuario.Location = new Point(12, 47);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(100, 23);
+            lblUsuario.Size = new Size(100, 34);
             lblUsuario.TabIndex = 0;
             lblUsuario.Text = "Usuário:";
             // 
@@ -57,7 +57,7 @@
             lblSenha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblSenha.Location = new Point(12, 123);
             lblSenha.Name = "lblSenha";
-            lblSenha.Size = new Size(100, 23);
+            lblSenha.Size = new Size(100, 34);
             lblSenha.TabIndex = 2;
             lblSenha.Text = "Senha:";
             // 
@@ -66,7 +66,7 @@
             txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUsuario.Location = new Point(147, 47);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(180, 34);
+            txtUsuario.Size = new Size(229, 34);
             txtUsuario.TabIndex = 1;
             // 
             // txtSenha
@@ -74,24 +74,24 @@
             txtSenha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtSenha.Location = new Point(147, 123);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(180, 34);
+            txtSenha.Size = new Size(229, 34);
             txtSenha.TabIndex = 3;
             txtSenha.UseSystemPasswordChar = true;
             // 
             // btnEntrar
             // 
-            btnEntrar.Location = new Point(259, 293);
+            btnEntrar.Location = new Point(277, 343);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(100, 33);
+            btnEntrar.Size = new Size(127, 39);
             btnEntrar.TabIndex = 4;
             btnEntrar.Text = "Entrar";
             btnEntrar.Click += btnEntrar_Click;
             // 
             // btnSair
             // 
-            btnSair.Location = new Point(30, 293);
+            btnSair.Location = new Point(41, 343);
             btnSair.Name = "btnSair";
-            btnSair.Size = new Size(80, 33);
+            btnSair.Size = new Size(117, 39);
             btnSair.TabIndex = 5;
             btnSair.Text = "Sair";
             btnSair.Click += btnSair_Click;
@@ -110,8 +110,10 @@
             // 
             // Login
             // 
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(393, 350);
+            BackColor = SystemColors.ButtonShadow;
+            BackgroundImage = Properties.Resources.Copilot_20250627_012153;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(476, 439);
             Controls.Add(linkCadastrar);
             Controls.Add(lblUsuario);
             Controls.Add(txtUsuario);

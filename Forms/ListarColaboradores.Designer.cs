@@ -34,36 +34,52 @@
             dgvColaboradores = new DataGridView();
             btnEditar = new Button();
             btnExcluir = new Button();
-
+            ((System.ComponentModel.ISupportInitialize)dgvColaboradores).BeginInit();
+            SuspendLayout();
+            // 
             // dgvColaboradores
-            dgvColaboradores.Location = new Point(20, 20);
-            dgvColaboradores.Size = new Size(740, 300);
-            dgvColaboradores.ReadOnly = true;
-            dgvColaboradores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            // 
             dgvColaboradores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            dgvColaboradores.ColumnHeadersHeight = 29;
+            dgvColaboradores.Dock = DockStyle.Top;
+            dgvColaboradores.Location = new Point(0, 0);
+            dgvColaboradores.Name = "dgvColaboradores";
+            dgvColaboradores.ReadOnly = true;
+            dgvColaboradores.RowHeadersWidth = 51;
+            dgvColaboradores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvColaboradores.Size = new Size(868, 300);
+            dgvColaboradores.TabIndex = 0;
+            // 
             // btnEditar
+            // 
+            btnEditar.Location = new Point(173, 340);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(107, 48);
+            btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
-            btnEditar.Location = new Point(180, 340);
-            btnEditar.Size = new Size(100, 30);
-            btnEditar.Click += new EventHandler(btnEditar_Click);
-
+            btnEditar.Click += btnEditar_Click;
+            // 
             // btnExcluir
-            btnExcluir.Text = "Excluir";
+            // 
             btnExcluir.Location = new Point(300, 340);
-            btnExcluir.Size = new Size(100, 30);
-            btnExcluir.Click += new EventHandler(btnExcluir_Click);
-
-            // Form
-            this.ClientSize = new Size(800, 400);
-            this.Controls.AddRange(new Control[]
-            {
-                dgvColaboradores,
-                btnEditar,
-                btnExcluir
-            });
-            this.Text = "Listagem de Colaboradores";
-            this.StartPosition = FormStartPosition.CenterParent;
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(100, 48);
+            btnExcluir.TabIndex = 2;
+            btnExcluir.Text = "Excluir";
+            btnExcluir.Click += btnExcluir_Click;
+            // 
+            // ListarColaboradores
+            // 
+            ClientSize = new Size(868, 446);
+            Controls.Add(dgvColaboradores);
+            Controls.Add(btnEditar);
+            Controls.Add(btnExcluir);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Name = "ListarColaboradores";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Listagem de Colaboradores";
+            ((System.ComponentModel.ISupportInitialize)dgvColaboradores).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

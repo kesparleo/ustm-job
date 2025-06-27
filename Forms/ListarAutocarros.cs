@@ -21,18 +21,18 @@ namespace Teste2.Forms
         private DbContextOptions<AppDbContext> _options;
         public ListarAutocarros()
         {
-        
-        InitializeComponent();
 
-        _options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseSqlite(Constants.DATABASE_SOURCE)
-                .Options;
+            InitializeComponent();
+
+            _options = new DbContextOptionsBuilder<AppDbContext>()
+                    .UseSqlite(Constants.DATABASE_SOURCE)
+                    .Options;
 
             var context = new AppDbContext(_options);
-        _controller = new AutocarroController(context);
+            _controller = new AutocarroController(context);
 
-        CarregarDados();
-            }
+            CarregarDados();
+        }
 
         private void CarregarDados()
         {
@@ -80,7 +80,28 @@ namespace Teste2.Forms
                 CarregarDados();
             }
         }
-        private void btnAdicionar_Click(object sender, EventArgs e)
+      /*  private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            var frm = new CadastroAutocarro(); // precisa ter um construtor sem parâmetros
+            frm.ShowDialog();
+            CarregarDados();
+        }*/
+        private void ListarAutocarros_Load(object sender, EventArgs e)
+        {
+            AjustarAlturaDataGrid();
+        }
+
+        private void ListarAutocarros_Resize(object sender, EventArgs e)
+        {
+            AjustarAlturaDataGrid();
+        }
+
+        private void AjustarAlturaDataGrid()
+        {
+            dgvAutocarros.Height = this.ClientSize.Height / 2;
+        }
+
+        private void btnAdicionar_Click_1(object sender, EventArgs e)
         {
             var frm = new CadastroAutocarro(); // precisa ter um construtor sem parâmetros
             frm.ShowDialog();

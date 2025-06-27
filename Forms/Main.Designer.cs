@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             menuStrip1 = new MenuStrip();
             autocarrosToolStripMenuItem = new ToolStripMenuItem();
             cadastrarNovoToolStripMenuItem = new ToolStripMenuItem();
@@ -47,7 +48,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { autocarrosToolStripMenuItem, colaboradoresToolStripMenuItem, usuáriosToolStripMenuItem, sairToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Size = new Size(1022, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -99,7 +100,7 @@
             // novoUsuárioToolStripMenuItem
             // 
             novoUsuárioToolStripMenuItem.Name = "novoUsuárioToolStripMenuItem";
-            novoUsuárioToolStripMenuItem.Size = new Size(32, 19);
+            novoUsuárioToolStripMenuItem.Size = new Size(182, 26);
             novoUsuárioToolStripMenuItem.Text = "Novo Usuário";
             // 
             // sairToolStripMenuItem
@@ -112,7 +113,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1022, 634);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Main";
