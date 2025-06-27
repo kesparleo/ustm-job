@@ -30,16 +30,52 @@ namespace Teste2.Forms
 
 
             // Associar eventos aos menus
-            cadastrarNovoToolStripMenuItem.Click += (s, e) => new CadastroAutocarro().ShowDialog();
+            /*cadastrarNovoToolStripMenuItem.Click += (s, e) => new CadastroAutocarro().ShowDialog();
             listarToolStripMenuItem.Click += (s, e) => new ListarAutocarros().ShowDialog();
 
             cadastrarNovoToolStripMenuItem1.Click += (s, e) => new CadastroColaborador().ShowDialog();
             listarToolStripMenuItem1.Click += (s, e) => new ListarColaboradores().ShowDialog();
 
-            novoUsuárioToolStripMenuItem.Click += (s, e) => new CadastroUsuario().ShowDialog();
+            novoUsuárioToolStripMenuItem.Click += (s, e) => new CadastroUsuario().ShowDialog();*/
+            cadastrarNovoToolStripMenuItem.Click += (s, e) =>
+            {
+                this.Hide();
+                new CadastroAutocarro().ShowDialog();
+                this.Show();
+            };
 
+            listarToolStripMenuItem.Click += (s, e) =>
+            {
+                this.Hide();
+                new ListarAutocarros().ShowDialog();
+                this.Show();
+            };
+
+            cadastrarNovoToolStripMenuItem1.Click += (s, e) =>
+            {
+                this.Hide();
+                new CadastroColaborador().ShowDialog();
+                this.Show();
+            };
+
+            listarToolStripMenuItem1.Click += (s, e) =>
+            {
+                this.Hide();
+                new ListarColaboradores().ShowDialog();
+                this.Show();
+            };
+
+            novoUsuárioToolStripMenuItem.Click += (s, e) =>
+            {
+                this.Hide();
+                new CadastroUsuario().ShowDialog();
+                this.Show();
+            };
             sairToolStripMenuItem.Click += (s, e) => Application.Exit();
             AplicarPermissoes();
+
+
+
         }
         private void AplicarPermissoes()
         {

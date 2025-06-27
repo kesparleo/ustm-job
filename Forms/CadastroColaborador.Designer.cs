@@ -36,6 +36,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroColaborador));
             lblNome = new Label();
             lblCargo = new Label();
             lblAutocarro = new Label();
@@ -50,55 +51,59 @@
             lblNome.AutoSize = true;
             lblNome.Location = new Point(20, 20);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(53, 20);
+            lblNome.Size = new Size(70, 28);
             lblNome.TabIndex = 0;
             lblNome.Text = "Nome:";
             // 
             // lblCargo
             // 
             lblCargo.AutoSize = true;
-            lblCargo.Location = new Point(20, 60);
+            lblCargo.Location = new Point(21, 98);
             lblCargo.Name = "lblCargo";
-            lblCargo.Size = new Size(52, 20);
+            lblCargo.Size = new Size(69, 28);
             lblCargo.TabIndex = 2;
             lblCargo.Text = "Cargo:";
             // 
             // lblAutocarro
             // 
             lblAutocarro.AutoSize = true;
-            lblAutocarro.Location = new Point(20, 100);
+            lblAutocarro.Location = new Point(12, 168);
             lblAutocarro.Name = "lblAutocarro";
-            lblAutocarro.Size = new Size(78, 20);
+            lblAutocarro.Size = new Size(104, 28);
             lblAutocarro.TabIndex = 4;
             lblAutocarro.Text = "Autocarro:";
             // 
             // txtNome
             // 
+            txtNome.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtNome.Location = new Point(120, 17);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(200, 27);
+            txtNome.Size = new Size(523, 34);
             txtNome.TabIndex = 1;
             // 
             // txtCargo
             // 
-            txtCargo.Location = new Point(120, 57);
+            txtCargo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtCargo.Location = new Point(120, 95);
             txtCargo.Name = "txtCargo";
-            txtCargo.Size = new Size(200, 27);
+            txtCargo.Size = new Size(523, 34);
             txtCargo.TabIndex = 3;
             // 
             // cmbAutocarro
             // 
+            cmbAutocarro.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cmbAutocarro.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbAutocarro.Location = new Point(120, 97);
+            cmbAutocarro.Location = new Point(120, 160);
             cmbAutocarro.Name = "cmbAutocarro";
-            cmbAutocarro.Size = new Size(200, 28);
+            cmbAutocarro.Size = new Size(523, 36);
             cmbAutocarro.TabIndex = 5;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(120, 161);
+            btnSalvar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnSalvar.Location = new Point(120, 305);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(100, 30);
+            btnSalvar.Size = new Size(423, 34);
             btnSalvar.TabIndex = 6;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
@@ -106,7 +111,9 @@
             // 
             // CadastroColaborador
             // 
-            ClientSize = new Size(360, 222);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(683, 434);
             Controls.Add(lblNome);
             Controls.Add(txtNome);
             Controls.Add(lblCargo);
@@ -114,9 +121,11 @@
             Controls.Add(lblAutocarro);
             Controls.Add(cmbAutocarro);
             Controls.Add(btnSalvar);
+            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "CadastroColaborador";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Cadastro de Colaborador";
+            Load += CadastroColaborador_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -96,5 +96,10 @@ namespace Teste2.Forms
             MessageBox.Show("Colaborador salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void CadastroColaborador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
